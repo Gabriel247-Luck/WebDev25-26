@@ -5,11 +5,9 @@ Links
       <a href="">Exercises</a>
       <a href="">Certification</a>
 
-
 Banner
       <div> w3Schools.com </div>
       <div style="font-size:8pt"> THE WORLD'S LARGEST WEB DEVELOPER SITE </div>
-
 
 Body
    Sidebar
