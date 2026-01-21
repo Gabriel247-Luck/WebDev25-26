@@ -4,10 +4,19 @@
       3) Display the results in the appropriate element
 */
 function recArea(){
+      let len= parseFloat(document.getElementById("Len").value);
+      let wid = parseFloat(document.getElementById("Wid").value);
+      let output = document.getElementById("output");
+      let Area = len * wid;
+      output.innerHTML = Area ;
+}  
 
-}
-
-function recPerimeter(){
+function recPerimeter() {
+      let len = parseFloat(document.getElementById("Len").value);
+      let wid = parseFloat(document.getElementById("Wid").value);
+      let output = document.getElementById("output");
+      let perimeter = 2 * (len + wid);
+      output.innerHTML = "Perimeter: " + perimeter;
 
 }
 
@@ -20,10 +29,18 @@ function recPerimeter(){
 let pi = 3.1415926;
 
 function cirArea(){
+       let radius = parseFloat(document.getElementById("Rad").value);
+       let output = document.getElementById("circleOutput");
+       let circumference = 2 * pi * radius;
+       output.innerHTML = "Circumference: " + circumference.toFixed(2);
 
 }
 
 function cirPerimeter(){
+      let radius = parseFloat(document.getElementById("Rad").value);
+      let output = document.getElementById("circleOutput");
+      let circumference = 2 * pi * radius;
+      output.innerHTML = "Circumference: " + circumference.toFixed(2);
 
 }
 
