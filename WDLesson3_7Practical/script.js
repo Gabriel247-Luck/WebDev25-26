@@ -26,3 +26,4 @@ function calcCompInt() {
   let A = P * Math.pow(1+ (R/100)/N, N*T);
   output.innerHTML = `An investment of ${P} at ${R}% annual interest will grow to ${A.toFixed(2)} after ${T} years.`
 }
+
