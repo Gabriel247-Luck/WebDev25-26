@@ -13,13 +13,48 @@ function name(){
 */
 
 /* Challenge 2:  Create the function for Challenge 1 scenario */
+function recArea(){
+      let len= parseFloat(document.getElementById("Len").value);
+      let wid = parseFloat(document.getElementById("Wid").value);
+      let output = document.getElementById("output");
+      let Area = len * wid;
 
+      if ( len <=0 || wid <= 0){
+        message="Inappropriate Measurement";
+      }else{
+        message = Area;
+      }
 
-
+      output.innerHTML = `<h3>${message}</h3>`
+}
 /* Challenge 3:  Complete the function for Pets Challenge on pets.html.  
 1) Review the HTML for the UI.  Remember dropdown boxes are just input.
 2) You will need to write HTML as part of the output.  
    For example, output.innerHTML = `<input src="pic.png">` would place the image in the <div>*/
-function pet(){
+function pet(){       
+  let a = document.getElementById("animal").value;
+  let e = document.getElementById("emotion").value;
+  let output = document.getElementById("output");
+  let filename = "";
+if (a == "Bear" && e == "Funny"){
+  filename="funnyBear.jpg";
+}
+if (a == "Bear" && e == "Sad"){ 
+  filename="sadBear.jpg";
+}
+if (a== "Cat" && e == "Funny"){
+   filename = "funnyCat.jpg";
+}
+if (a== "Cat" && e == "Sad"){ 
+  filename = "sadCat.jpg";
+}
+if (a== "Dog" && e == "Funny"){ 
+  filename="funnyDog.jpg";
+}
+if (a == "Dog" && e == "Sad"){ 
+  filename="sadDog.jpg";
+}
+
+output.innerHTML= `<img src="${filename}">`;
 
 }
