@@ -13,7 +13,7 @@
 function balance(){
         let build = "";
         let output = document.getElementById("output");
-        let p = parseFloat(document.getElementById("p").value)/100;
+        let p = parseFloat(document.getElementById("p").value);
         let r = parseFloat(document.getElementById("r").value)/100;
         let years = parseFloat(document.getElementById("t").value);
         build +=`<table><tr><th>Year</th><th>Balance</th></tr>`;
