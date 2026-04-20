@@ -2,7 +2,7 @@ let data, info; //global variables
 
 async function init(){
   // Challenge 1: Retrieve the FBI data from https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json
-  let link = "";
+  let link = "https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json";
   info = await fetch(link);
   data = await info.json();
   
@@ -17,9 +17,20 @@ async function init(){
      into a hyperlink in order to actually display the PDF in a new tab.
      https://mozilla.github.io/pdf.js/web/viewer.html?file=${...}
   */
+for (let i = 0; i < data.length; i++){
+   let crimimal = data[i];
+   
+   build += `<div class="card">
+            <h3>${crimimal.title}</h3>
+            <img src="${crimimal.image}" class="fit">
+            <h4>${crimimal.sex}</h4>
+            <h5>${crimimal.details}</h5>
+            <a href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${crimimal.pdf}" target = "_blank"> poster </a>
+          </div>`;
 
+}
+ 
 
 
   output.innerHTML = build;
 }
-
